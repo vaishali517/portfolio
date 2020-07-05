@@ -1,0 +1,170 @@
+/* import fonts from font.css */
+
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    /*transition: all .5s ease;*/
+}
+/*---------------------------------------Sidebar Start---------------------------------------*/
+.sidebar {
+    position: fixed;
+    left: -350px;
+    width: 350px;
+    height: 100vh;
+    background: #EAEAEA;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    line-height: 75px;
+    background: #ADA996;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: black;
+    padding-left: 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black; 
+    transition: .4s;
+}
+
+.sidebar ul li:hover {
+    background: #ADA996;
+    padding-right: 5px;
+}
+
+.sidebar ul a i{
+    margin-right: 15px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #EAEAEA;
+    border-radius: 5px;
+}
+
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: black;
+    padding: 4px 10px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -310px;
+    top: 25px;
+    font-size: 16px;
+    color: black;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 310px;
+}
+
+#check:checked ~ section {
+    margin-left: 250px;
+}
+
+.sidebar header {
+    margin-bottom: 50px;
+}
+/*--------------------------------------Sidebar End---------------------------------------*/
+
+/*--------------------------------------Home Section--------------------------------------*/
+.site-main .home .home-title h3{
+    margin: 0;
+    padding-top: 150px;
+    padding-left: 400px;
+    font-weight: 450;
+    font-size: 150;
+    color: white;
+    line-height: 50px;
+}
+
+.site-main .home .home-title h1{
+    margin: 0;
+    padding-left: 400px;
+    font-size: 4rem;
+    color: white;
+    line-height: 50px;
+}
+
+.site-main .home .home-title h4 {
+    margin: 0;
+    padding-left: 400px;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 50px; 
+}
+
+.site-main .home .site-img {
+    padding: 0 10rem;
+    width: 3rem;
+    height: 7vh;
+    border-radius: 50%;
+    padding-top: 200px;
+}
+
+.title-text {
+    font: normal bold 50px;
+} 
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 0.8rem 2.2rem;
+    font: normal 500 16px/20px;
+}
+/*--------------------------------------Home Section--------------------------------------*/
+/*
+    <---css variables are dedclared in the following format--->
+       --primary-color : #ffffff   (CASE SENSITIVE) 
+    <---Can be accessed using var(--primary-color)--->
+*/
